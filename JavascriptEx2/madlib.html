@@ -1,0 +1,65 @@
+<!-- Tyler Smith, 9/4/2020, Javascript Ex 2, Web Technologies-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Lib</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="home.html">Home</a>
+        <a class="nav-selected" href="madlib.html">Mad Lib</a>
+        <a href="tsmithCalculator.html">Calculator</a>
+        <a href="about.html">About Me</a>
+    </div>
+
+    <script>
+        let userWords = [];
+        userWords.push(prompt("animal (plural)", "starfish"));
+        userWords.push(prompt("adjective", "bouncy"));
+        userWords.push(prompt("'ing' verb", "golfing"));
+        userWords.push(prompt("person", "Jake Gyllenhaal"));
+        userWords.push(prompt("color", "orange"));
+        userWords.push(prompt("food (plural)", "ice cream"));
+
+         // using template literals to easily insert user input into string
+         var madLib = `When asked to give a TED talk, 
+                    I chose to give a detailed presentation on <span>${userWords[0]}</span>,
+                     particularly ones that are <span>${userWords[1]}</span>. I gave detailed
+                     insight into their love for <span>${userWords[2]}</span>, and how they
+                     avoid their natural predator, <span>${userWords[3]}</span>. In fact, 
+                     my favorite anecdote is that <span>${userWords[0]}</span> love to eat
+                     <span>${userWords[4]}</span> <span>${userWords[5]}</span>. I was given a standing ovation,
+                     as well as numerous awards for my outstanding research.`;
+    </script>
+    <div class="body-container">
+        <div class="text-container">
+            <h1 class="text-heading">My Oustanding TED Talk</h1>
+            <h2 id="mad-lib"></h2>
+
+            <h3 class="text-heading" class="bold">Bolded</h3>
+            <h4 id="bold" class="bold"></h4>
+
+            <h3 class="text-heading">All Caps</h3>
+            <h4 id="capitals"></h4>
+
+            <h3 class="text-heading red">Red Font</h3>
+            <h4 id="red-font" class="red"></h4>
+        </div>
+        <div class="col-flex">
+            <img width="675px" height="450px" src="ted_talk.jpeg"/>
+            <div class="btn" onclick="window.location.reload();"><h2>Redo MadLib!</h2></div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('mad-lib').innerHTML = madLib;
+        document.getElementById('bold').innerHTML = madLib;
+        document.getElementById('capitals').innerHTML = madLib.toUpperCase();
+        document.getElementById('red-font').innerHTML = madLib;
+    </script>
+</body>
+</html>

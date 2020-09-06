@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #98DFEA;
+    /* Using Google's Raleway Font */
+    font-family: 'Raleway', sans-serif;
+}
+
+#page-container {
+    display:flex;
+    justify-content: center;
+    width:90%;
+    height:100%;
+    margin: auto;
+    background-color:#8367C7;
+}
+
+#thank-you-container {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+#img-preview {
+    /* Hide empty img by default */
+    display:none;
+    max-width:250px;
+    max-height: 250px;
+}
+
+input, textarea {
+    border-radius: 10px;
+}
+
+form {
+    width: 60%;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+legend {
+    background-color: #DB5461;
+    padding:5px;
+    border-radius:500px;
+    color:white;
+}
+
+input[type=file] {
+    border-radius: 0;
+}
+
+#img-container {
+    display:flex;
+    justify-content: center;
+}
+
+div {
+    margin: 10px 0 10px 0;
+}
+
+fieldset {
+    margin: 10px 0 10px 0;
+    text-align:center;
+    width:80%;
+    background-color: #FDFFFC;
+}
+
+/* enlarge entire fieldset when hovered */
+fieldset:hover {
+    font-size:110%;
+}
+
+span.left, span.right {
+    display:inline-block;
+    margin:0;
+    padding:3px;
+    border-radius:25px;
+}
+
+span.left {
+    background-color:blue;
+    color:white;
+}
+
+span.right {
+    background-color: crimson;
+    color:white;
+}
+
+#submit {
+    padding: 10px 25px 10px 25px;
+    margin: 10px 0 20px 0;
+    border-radius: 500px;
+    box-shadow: 5px 5px #1F2041;
+    outline:none;
+    border:none;
+    transition:0.1s;
+    background-color: #42458A;
+    color:white;
+}
+
+#submit:active, #back:active {
+    /* Illusion of being pressed inward when clicked */
+    box-shadow: 0 0 black;
+    transform: translate(5px, 5px);
+}
+
+#thank-you {
+    color:white;
+    font-family: 'Allan';
+    margin: 20% 0;
+    font-size: 600%;
+}
+
+#cursive-heading {
+    color:white;
+    font-family: 'Allan';
+    font-size:300%;
+    margin:10px 0;
+}
+
+#back {
+    width:200px;
+    height:100px;
+    border-radius: 500px;
+    box-shadow: 5px 5px #1F2041;
+    outline:none;
+    border:none;
+    transition:0.1s;
+    background-color: #42458A;
+    color:white;
+    font-size:250%;
+}
+

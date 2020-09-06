@@ -1,0 +1,153 @@
+* {
+    margin:0;
+}
+
+body {
+    padding:0;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.nav-bar{
+    margin:20px;
+    border-radius: 500px;
+    padding:0;
+    background: rgb(195,32,228);
+    background: linear-gradient(-45deg, #ff7300, #ff8000, #ec27bb, #ff0040, #ff0088);
+    display:flex;
+    background-size: 400% 100%;
+    animation: gradientAnim 5s infinite;
+    
+}
+/* looked here for inspiration: https://onaircode.com/html-css-navbar-examples/ */
+@keyframes gradientAnim {
+    0% { background-position: 0% 50%; }
+      
+    50%{ background-position: 100% 50%; }
+      
+    100% { background-position: 0% 50%; }
+}
+
+
+.nav-bar a {
+    padding: 15px 15px;
+    margin: 0 5px 0 0;
+    font-size:25px;
+    text-decoration:none;
+    color:white;
+    border: 1px solid rgba(0 0, 0, 0);
+    transition: text-shadow 0.2s;
+}
+
+/* Only first link should be rounded */
+.nav-bar:first-child {
+    border-top-left-radius:500px;
+    border-bottom-left-radius:500px;
+}
+
+.nav-bar a:hover {
+    text-shadow: 0px 0px 3px white;
+}
+
+.nav-bar a.nav-selected {
+    text-decoration: underline;
+}
+
+.body-container {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height: 770px;
+    width:90%;
+    margin:auto;
+    overflow:hidden;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.text-container {
+    text-align:justify;
+    width: 45%;
+}
+
+.justify-text {
+    text-align:justify;
+}
+
+.text-heading {
+    display:inline-block;
+    border-bottom: 2px solid black;
+    padding:3px;
+    margin: 10px 0;
+}
+
+.red {
+    color:red;
+    border-color:red;
+}
+
+.bold {
+    font-weight:950;
+}
+
+span {
+    text-decoration:underline;
+}
+
+img {
+    border:2px solid red;
+}
+
+div.sidebar img {
+    border: 1px solid black;
+    margin:0;
+    width: 350px;
+    height:350px;
+}
+
+.col-flex {
+    /* flexbox used to display in a vertical, centered way */
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.row-flex {
+    background-color: lightsteelblue;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    padding:30px;
+}
+
+.row-flex * {
+    margin: 20px;
+}
+
+.row-flex img {
+    border: 2px solid black;
+}
+
+.btn {
+    color:white;
+    padding: 20px 20px;
+    margin:30px 0;
+    /*  high border radius for pill shape */
+    border-radius:500px;
+    background: rgb(195,32,228);
+    /* gradient background similar to nav bar */
+    background: linear-gradient(-45deg, #ffbf00, #ff8000);
+}
+
+.btn * {
+    /* no text highlighting */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.btn:hover {
+    /* cursor to signify button and underline the text */
+    cursor:pointer;
+    text-decoration:underline;
+}

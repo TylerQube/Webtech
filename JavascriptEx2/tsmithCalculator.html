@@ -1,0 +1,38 @@
+<!-- Tyler Smith, 9/4/2020, Javascript Ex 2, Web Technologies-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="home.html">Home</a>
+        <a href="madlib.html">Mad Lib</a>
+        <a class="nav-selected" href="tsmithCalculator.html">Calculator</a>
+        <a href="about.html">About Me</a>
+    </div>
+
+    <div class="body-container">
+        <div class="col-flex">
+            <div class="sidebar"><img src="chicken_snake.png" /></div>
+            <div class="sidebar"><img src="froot_frog.jpg" /></div>
+        </div>
+        
+        <div class="col-flex">
+            <h2 class="text-heading">Result:</h1>
+            <h1 id="math-output"></h2>
+            <div class="btn" onclick="window.location.reload();"><h2>Go Again</h2></div>
+        </div>
+
+        <div class="col-flex">
+            <div class="sidebar"><img src="bird_blanket.jpg" /></div>
+            <div class="sidebar"><img src="butter_dog.png" style="background-color:skyblue"/></div>
+        </div>
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>

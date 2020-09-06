@@ -1,0 +1,110 @@
+/* Tyler Smith, 9/8/2020, Javascript Ex 3, Web Technologies*/ 
+
+.flex-col { 
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+}
+
+.flex-row {
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+}
+
+.btn {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+    width:120px;
+    height:120px;
+    outline:none;
+    border:0;
+    color:white;
+    background-color:limegreen;
+    border-radius:50%;
+    margin:0 10px;
+    transition: box-shadow 0.2s ease-in-out, transform 0.1s;
+}
+
+.btn-fill {
+    background:red;
+    box-shadow: inset 0 0 0 60px limegreen;
+}
+
+.btn-fill:hover {
+    box-shadow: inset 0 0 0 1px limegreen;
+}
+
+.btn-fill:active {
+    transform: translateY(10px);
+}
+
+.btn-small {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    font-size:20px;
+    border-radius:500px;
+    width:100px;
+    height:50px;
+    overflow:hidden;
+    transition: 0.2s;
+    color:white;
+    background: linear-gradient(-45deg, rgb(246, 74, 6), rgb(255, 8, 131));
+}
+
+.btn-small:hover {
+    text-decoration:underline;
+}
+
+.function-container {
+    height:0;
+    width:400px;
+    margin: 20px;
+    border:0px solid black;
+    background-color:skyblue;
+    overflow:hidden;
+    transition: height 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin:15px;
+}
+
+input[type=number] {
+    width:80px;
+    font-size:25px;
+    text-align:center;
+    margin: 5px 15px;
+    border:0;
+    outline:none;
+    /* transparent border to prevent added border from shifting placement */
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: border 0.2s;
+}
+
+input[type=text] {
+    text-align:center;
+    width:70px;
+    font-size:25px;
+    margin: 5px 15px;
+    border:0;
+    outline:none;
+    /* transparent border to prevent added border from shifting placement */
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: border 0.2s;
+}
+
+#noun-input {
+    width: 140px;
+}
+
+.no-select {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}

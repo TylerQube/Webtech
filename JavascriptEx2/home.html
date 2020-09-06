@@ -1,0 +1,84 @@
+<!-- Tyler Smith, 9/4/2020, Javascript Ex 2, Web Technologies-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="calc_style.css"/>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a class="nav-selected" href="home.html">Home</a>
+        <a href="madlib.html">Mad Lib</a>
+        <a href="tsmithCalculator.html">Calculator</a>
+        <a href="about.html">About Me</a>
+    </div>
+    <div class="body-container">
+        <div class="text-container">
+            <h1 class="text-heading">Diogenes</h1>
+            <!-- $emsp inserts a tab in the text-->
+            <h2>&emsp;The stories told of Diogenes illustrate the logical consistency of his character. 
+                He inured himself to the weather by living in a clay wine jar belonging to the temple of Cybele. 
+                He destroyed the single wooden bowl he possessed on seeing a peasant boy drink from the hollow of his hands. 
+                He then exclaimed: "Fool that I am, to have been carrying superfluous baggage all this time!"</h6>
+            <h2>&emsp; According to Diogenes Laërtius, when Plato gave the tongue-in-cheek definition of man as 
+                "featherless bipeds," Diogenes plucked a chicken and brought it into Plato's Academy, saying, 
+                "Behold! I've brought you a man."</h2>
+            <h5>from <a href="https://en.wikipedia.org/wiki/Diogenes" target="_blank">https://en.wikipedia.org/wiki/Diogenes</a></h5>
+        </div>
+        <div>
+            <form name="calc">
+                <div id="calc-container">
+                    <div id="logo">
+                        <h3 >ISMA Instruments</h3>
+                        <input type="text" name="screen" id="screen"/>
+                    </div>
+                    
+                
+                    <div name="sin" class="calc-btn no-select" onclick="calc.screen.value = Math.sin(calc.screen.value * Math.PI/180);">sin</div>
+                    <div id="cos" class="calc-btn no-select" onclick="calc.screen.value = Math.cos(calc.screen.value * Math.PI/180);">cos</div>
+                    <div id="tan" class="calc-btn no-select" onclick="calc.screen.value = Math.tan(calc.screen.value * Math.PI/180);">tan</div>
+                    <div id="clr" class="calc-btn no-select" onclick="calc.screen.value = '';">CLR</div>
+        
+                    <div id="pi" class="calc-btn no-select" onclick="calc.screen.value += 'π';">π</div>
+                    <div id="open-paren" class="calc-btn no-select" onclick="calc.screen.value += '(';">(</div>
+                    <div id="close-paren" class="calc-btn no-select" onclick="calc.screen.value += ')';">)</div>
+                    <div id="divide" class="calc-btn no-select" onclick="calc.screen.value += '÷';">÷</div>
+        
+                    <div id="seven" class="calc-btn no-select" onclick="calc.screen.value += '7';">7</div>
+                    <div id="eight" class="calc-btn no-select" onclick="calc.screen.value += '8';">8</div>
+                    <div id="nine" class="calc-btn no-select" onclick="calc.screen.value += '9';">9</div>
+                    <div id="multiply" class="calc-btn no-select" onclick="calc.screen.value += '✕';">✕</div>
+        
+                    
+                    <div id="four" class="calc-btn no-select" onclick="calc.screen.value += '4';">4</div>
+                    <div id="five" class="calc-btn no-select" onclick="calc.screen.value += '5';">5</div>
+                    <div id="six" class="calc-btn no-select" onclick="calc.screen.value += '6';">6</div>
+                    <div id="subtract" class="calc-btn no-select" onclick="calc.screen.value += '-';">-</div>
+        
+                    <div id="one" class="calc-btn no-select" onclick="calc.screen.value += '1';">1</div>
+                    <div id="two" class="calc-btn no-select" onclick="calc.screen.value += '2';">2</div>
+                    <div id="three" class="calc-btn no-select" onclick="calc.screen.value += '3';">3</div>
+                    <div id="add" class="calc-btn no-select" onclick="calc.screen.value += '+';">+</div>
+        
+                    <div id="zero" class="calc-btn no-select" onclick="calc.screen.value += '0';">0</div>
+                    <div id="power" class="calc-btn no-select" onclick="calc.screen.value += '^';">^</div>
+                    <div id="decimal" class="calc-btn no-select" onclick="calc.screen.value += '.'">.</div>
+                    <div id="desmos" class="calc-btn no-select" onclick="window.open('https://www.desmos.com/calculator');">desmos</div>
+                    <!-- Ternary operator used to recall memory if it's saved-->
+                    <div id="mem-recall" class="calc-btn no-select" onclick="document.getElementById('memStorage').textContent !== '' ? calc.screen.value = document.getElementById('memStorage').textContent : console.log('No memory saved');">MR</div>
+                    <div id="mem" class="calc-btn no-select" onclick="document.getElementById('memStorage').textContent = calc.screen.value;">M</div>
+                    <!-- .replace() used to replace unicode characters with correct syntax for eval() -->
+                    <div id="equals" class="calc-btn no-select" onclick="try { calc.screen.value = eval(calc.screen.value.replace('π', Math.PI).replace('÷', '/').replace('✕', '*').replace('^', '**')); } catch (error) { calc.screen.value = 'Error' }">=</div>
+        
+                    <!-- uses display:none, invisible mem storage -->
+                    <div id="memStorage"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

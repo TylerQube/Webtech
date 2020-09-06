@@ -1,0 +1,61 @@
+<!-- Tyler Smith, 8/25/2020, Web Technologies Calculator Assignment-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+</head>
+<body>
+    <form name="calc">
+        <div id="calc-container">
+            <div id="logo">
+                <h3 >ISMA Instruments</h3>
+                <input type="text" name="screen" id="screen"/>
+            </div>
+            
+        
+            <div name="sin" class="btn no-select" onclick="calc.screen.value = Math.sin(calc.screen.value * Math.PI/180);">sin</div>
+            <div id="cos" class="btn no-select" onclick="calc.screen.value = Math.cos(calc.screen.value * Math.PI/180);">cos</div>
+            <div id="tan" class="btn no-select" onclick="calc.screen.value = Math.tan(calc.screen.value * Math.PI/180);">tan</div>
+            <div id="clr" class="btn no-select" onclick="calc.screen.value = '';">CLR</div>
+
+            <div id="pi" class="btn no-select" onclick="calc.screen.value += 'π';">π</div>
+            <div id="open-paren" class="btn no-select" onclick="calc.screen.value += '(';">(</div>
+            <div id="close-paren" class="btn no-select" onclick="calc.screen.value += ')';">)</div>
+            <div id="divide" class="btn no-select" onclick="calc.screen.value += '÷';">÷</div>
+
+            <div id="seven" class="btn no-select" onclick="calc.screen.value += '7';">7</div>
+            <div id="eight" class="btn no-select" onclick="calc.screen.value += '8';">8</div>
+            <div id="nine" class="btn no-select" onclick="calc.screen.value += '9';">9</div>
+            <div id="multiply" class="btn no-select" onclick="calc.screen.value += '✕';">✕</div>
+
+            
+            <div id="four" class="btn no-select" onclick="calc.screen.value += '4';">4</div>
+            <div id="five" class="btn no-select" onclick="calc.screen.value += '5';">5</div>
+            <div id="six" class="btn no-select" onclick="calc.screen.value += '6';">6</div>
+            <div id="subtract" class="btn no-select" onclick="calc.screen.value += '-';">-</div>
+
+            <div id="one" class="btn no-select" onclick="calc.screen.value += '1';">1</div>
+            <div id="two" class="btn no-select" onclick="calc.screen.value += '2';">2</div>
+            <div id="three" class="btn no-select" onclick="calc.screen.value += '3';">3</div>
+            <div id="add" class="btn no-select" onclick="calc.screen.value += '+';">+</div>
+
+            <div id="zero" class="btn no-select" onclick="calc.screen.value += '0';">0</div>
+            <div id="power" class="btn no-select" onclick="calc.screen.value += '^';">^</div>
+            <div id="decimal" class="btn no-select" onclick="calc.screen.value += '.'">.</div>
+            <div id="desmos" class="btn no-select" onclick="window.open('https://www.desmos.com/calculator');">desmos</div>
+            <!-- Ternary operator used to recall memory if it's saved-->
+            <div id="mem-recall" class="btn no-select" onclick="document.getElementById('memStorage').textContent !== '' ? calc.screen.value = document.getElementById('memStorage').textContent : console.log('No memory saved');">MR</div>
+            <div id="mem" class="btn no-select" onclick="document.getElementById('memStorage').textContent = calc.screen.value;">M</div>
+            <!-- .replace() used to replace unicode characters with correct syntax for eval() -->
+            <div id="equals" class="btn no-select" onclick="try { calc.screen.value = eval(calc.screen.value.replace('π', Math.PI).replace('÷', '/').replace('✕', '*').replace('^', '**')); } catch (error) { calc.screen.value = 'Error' }">=</div>
+
+            <!-- uses display:none, invisible mem storage -->
+            <div id="memStorage"></div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#theme-dropdown {
+    padding:0;
+    user-select:none;
+    position:relative;
+    display:inline-block;
+    border:2px solid black;
+    font-size:150%;
+}
+
+#theme-prompt, .theme {
+    padding: 5px;
+}
+
+#theme-dropdown:hover #theme-menu {
+    height:100%;
+    display:block;
+}
+
+#theme-menu {
+    /* Absolute so it is always directly below the button*/
+    position: absolute;
+    width:100%;
+    height:0%;
+    display:none;
+    transition:0.2s;
+    /* z-index so it nothing obscures the menu */
+    z-index: 1;
+}
+
+.theme {
+    border: 1px solid transparent;
+    transition:0.2s;
+}
+
+.theme:hover {
+    font-size:105%;
+}
+
+.theme-clicked {
+    border:1px solid yellow;
+}
+
+.theme-clicked #theme-dark {
+    border: 1px solid white;
+}
+
+#theme-light {
+    background-color: white;
+    color:black;
+}
+
+#theme-dark {
+    background-color: #202020;
+    color:white;
+}
+
+#theme-soft {
+    background-color: #98C1D9;
+    color: #303036;
+}
+
+#theme-vibrant {
+    background-color: purple;
+    color: pink;
+}
+
+.bordered {
+    display:inline-block;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 20px;
+}
+
+#img-container {
+    margin: 20px;
+    padding: 20px 20px;
+    display:inline-block;
+}
+
+#pokemon {
+    width:300px;
+    height:300px;
+}
+
+#change-btn {
+    display:inline-block;
+    border: 1px solid black;
+    color:black;
+    border-radius: 500px;
+    padding: 10px 10px;
+    user-select:none;
+    -moz-user-select: none;
+    margin: 20px;
+    font-size:120%;
+
+    /* background twice as wide so it can slid to create fill effect*/
+    background: linear-gradient(to right, orange 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition-duration: 0.3s;
+}
+
+#change-btn:hover {
+    background-position: left bottom;
+    color:white;
+}

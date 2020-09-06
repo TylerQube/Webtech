@@ -1,0 +1,45 @@
+<!-- Tyler Smith, 9/1/2020, Web Tech, JS Exercise 1 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <script>
+        // prompt user for name and output with welcome message 
+        var name = prompt("Hello! What's your name?", "Paul Atreides");
+        // default if name is empty or user cancels prompt
+        if (name === "" || name) {
+            name = "Paul Atreides";
+        }
+        var msg = "Welcome, " + name + "!";
+        // set message as content of heading
+        document.getElementById('name').textContent = msg;
+    </script>
+    <div id="theme-dropdown">
+        <div id="theme-prompt">Theme picker:</div>
+        <div id="theme-menu">
+            <div id="theme-vibrant" class="theme">Vibrant</div>
+            <div id="theme-light" class="theme">Light  ✓</div>
+            <div id="theme-dark" class="theme">Dark</div>
+            <div id="theme-soft" class="theme">Soft</div>
+        </div>
+    </div><br/>
+    <div class="bordered">
+        <h3 id="bgColor">Background color is white</h3>
+        <h3 id="textColor">Text color is black</h3>
+    </div>
+    <div>
+        <div id="img-container">
+            <img src="resources/torchic.png" id="pokemon"/><br/>
+            <div id="change-btn">Click to evolve!</div> 
+        </div> 
+        
+    </div>
+    <script src="listeners.js"></script>
+</body>
+</html>

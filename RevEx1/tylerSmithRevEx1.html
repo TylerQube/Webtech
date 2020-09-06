@@ -1,0 +1,116 @@
+<!-- Tyler Smith, 8/21/2020, Web Technologies Review Assignment 1-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMSA Mingle</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div id="page-container">
+        
+        <form action="response.html">
+            <h1 id="cursive-heading">Welcome to IMSA Mingle!</h1>
+            <fieldset>
+                <legend>Your face</legend>
+                <label for="img-face">Choose image:</label>
+                <input type="file" id="img-select" name="img-face" accept=".png, .jpg, .jpeg" onchange="imgPreview(this);"/>
+                <p>Preview Image:</p>
+                <div id="img-container"><img id="img-preview"/></div>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>General Info</legend>
+                <div>
+                    <label for="name">Full Name: </label>
+                    <input type="text" name="name" id="input-name" required/><br/>
+                </div>
+                <div>
+                    <label for="age">Age: </label>
+                    <input type="number" name="age" min="18" max="99" id="input-name" required/>
+                </div>
+
+                <div id="gender-container">
+                    <label for="gender">Gender: </label><br/>
+                    <input type="radio" name="gender" value="Male">Male</input><br/>
+                    <input type="radio" name="gender" value="Female">Female</input><br/>
+                    <input type="radio" name="gender" value="Nonbinary">Nonbinary</input><br/>
+                    <input type="radio" name="gender" value="Nonbinary">Other: <input type="text"/></input>
+                </div>
+                <div>
+                    <label for="birthday">Date of Birth: </label>
+                    <input type="date" name="birthday" id="input-birthday"/>
+                </div>
+                <div>
+                    <label for="color">Favorite Color: </label>
+                    <input type="color" name="color" id="input-color"/>
+                </div>
+
+                <div>
+                    <label for="continent">Continent of Residence</label>
+                    <select name="continent" id="input-continent">
+                        <option value="North America">North America</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="South America">South America</option>
+                    </select>
+                </div>
+                <div>
+                    <p>What are you looking for in a partner?</p>
+                    <textarea id="desc" rows="3"> </textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Physical Description</legend>
+                <div>
+                    <label for="height">Height: </label>
+                    <span class="left">Short</span>
+                    <input type="range" name="height" id="input-range">
+                    <span class="right">Tall</span><br/>
+                </div>
+
+                <div>
+                    <label for="fitness">Fitness: </label>
+                    <span class="left">Sedentary</span>
+                    <input type="range" name="fitness" id="input-fitness">
+                    <span class="right">Athletic</span><br/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Info</legend>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="input-email"/>
+                </div>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" name="phone" id="input-phone"/>
+                </div>
+                <div>
+                    <label for="instagram">Instagram:</label>
+                    <input type="text" name="instagram" id="input-insta"/>
+                </div>
+                <div>
+                    <p>How would you like to be contacted?</p>
+                    
+                    <input type="checkbox" id="check-email" name="check-email" value="email"/>
+                    <label for="check-email">Email</label>
+
+                    <input type="checkbox" id="check-call" name="check-call" value="call"/>
+                    <label for="check-call">Phone Call</label>
+                   
+                    <input type="checkbox" id="check-text" name="check-text" value="text"/>
+                    <label for="check-text">Text</label>
+                </div>
+            </fieldset>
+            <button id="submit" type="submit"><h2>Sign Up</h2></button>
+        </form>
+    </div>
+</body>
+<script src="survey.js"></script>
+</html>

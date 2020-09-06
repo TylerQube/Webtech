@@ -1,0 +1,87 @@
+form {
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#calc-container {
+    /* Using CSS grid, learned from w3schools*/
+    display:grid;
+    padding:10px;
+    grid-template: 
+        'header header header header'
+        'auto auto auto auto'
+        'auto auto auto auto'
+        'auto auto auto auto'
+        'auto auto auto auto';
+    background-color: #92c4f0;
+    border-radius:5%;
+    box-shadow: 5px 5px #193391;
+    
+}
+
+#logo {
+    /* sets div to span 4 grid columns */
+    grid-column-start: span 4;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#logo h3 {
+    color:white;
+    font-family: 'Allan';
+    font-size:250%;
+    margin:0;
+    letter-spacing: 2px;
+}
+
+#screen {
+    grid-area: header;
+    border: 1px solid black;
+    padding:15px 5px;
+    margin: 10px 0;
+    box-shadow: 2px 2px inset black;
+    font-size:120%;
+}
+
+.calc-btn {
+    padding: 15px;
+    border-radius: 15px;
+    margin: 5px 5px;
+    text-align:center;
+    background-color:white;
+
+    box-shadow: 4px 4px #193391;
+    /* Setting transition time */
+    transition:0.1s;
+}
+
+.calc-btn:active {
+    /* Translates button to make it look animated */
+    box-shadow: 0 0 black;
+    transform:translate(4px, 4px);
+}
+
+#memStorage {
+    /* invisible memory storage */
+    display:none;
+}
+
+#equals {
+    grid-column-start: span 2;
+}
+
+/* No select class found on stackoverflow, webkits added for compatibility */
+/* https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting */
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
