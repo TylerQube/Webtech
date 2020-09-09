@@ -199,7 +199,8 @@ function pluralize() {
             }
             // if inputs are valid
             if(valid) {
-                var noun = input.value;
+                // lowercase to prevent incorrect plurals
+                var noun = input.value.toLowerCase();
                 var plural = noun;
 
                 // pluralize input
@@ -207,11 +208,23 @@ function pluralize() {
                     plural = noun.slice(0, noun.length-2) + "i";
                 } else if(noun.endsWith("s")) {
                     plural += "es";
+                // handle a few special plurals
                 } else if(noun == "mouse") {
                     plural = "mice";
-                } else {
+                } else if(noun == "city") {
+                    plural = "cities";
+                } else if(noun == "fish") {
+                    plural = noun;
+                } else if(noun == "cash") {
+                    plural = noun;
+                } else if(noun == "person") {
+                    plural = "people";
+                }
+                // if no special endings/nouns only add an s
+                else {
                     plural += "s";
                 }
+                // use singular if num input is 1
                 if (numInput.value == 1) {
                     result.innerHTML = numInput.value + " " + noun;
                 } else {

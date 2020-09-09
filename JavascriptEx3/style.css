@@ -31,11 +31,12 @@
 }
 
 .btn-fill {
-    background:red;
+    background: linear-gradient(-45deg, rgb(246, 74, 6), rgb(255, 8, 131));
     box-shadow: inset 0 0 0 60px limegreen;
 }
 
 .btn-fill:hover {
+    /* remove most of box shadow to create illusion of btn filling in    */
     box-shadow: inset 0 0 0 1px limegreen;
 }
 
