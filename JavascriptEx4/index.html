@@ -1,0 +1,30 @@
+<!-- Tyler Smith, 9/11/2020, JS Exercise 4, Web Technologies -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops!</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="flex-col" id="page-container">
+        <h1>Loops!</h1>
+        <h3>Select an option from the following:</h3>
+        <div class="list-container">
+            <h4>1. Practicing Loops</h4>
+            <h4>2. Armstrong Numbers</h4>
+            <h4>3. Pattern Creation</h4>
+            <h4>4. Find Password</h4>
+            <h4>5. Quit</h4>
+        </div>
+        <input id="func-num" type="number" min="1" max="5" value="1">
+        <div class="btn no-select" onclick="menu();">Run</div>
+        <h3 id="error-display"></h3>
+
+        
+    </div>
+    <div id="cover" class="no-select"><h1 id="function-title"></h1></div>
+</body>
+<script src="script.js" ></script>
+</html>

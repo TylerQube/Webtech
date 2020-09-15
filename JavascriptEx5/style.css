@@ -1,0 +1,77 @@
+/* Monica Narciso & Tyler Smith, 9/18/2020, Javascript Exercise 5, Web Technologies */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+.flex-row {
+    display:flex;
+    justify-content:center;
+}
+
+.btn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    /* em is a relative unit, 1em is equal to the font size of the parent element */
+    font-size:25px;
+    width: 7em;
+    margin:10px;
+    color:white;
+    background-color: #316ae6;
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+.btn:hover {
+    transform:translate(-6px, -6px);
+    box-shadow: 6px 6px 0 #2452b6;
+}
+
+.btn:active {
+    transform:translate(0, 0);
+    box-shadow: 0px 0px 0 #2452b6;
+}
+
+#func-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    font-size:20px;
+}
+
+tr:first-child {
+    background-color:#5cb6ff;
+}
+
+tr:nth-child(2n) {
+    background-color: #e2e2e2;
+}
+
+td:first-child {
+    background-color:#5cb6ff;
+}
+
+td {
+    padding:8px;
+    border:1px solid black;
+}
+
+.no-select {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
