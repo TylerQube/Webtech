@@ -1,6 +1,9 @@
 /* Monica Narciso & Tyler Smith, 9/18/2020, Javascript Exercise 5, Web Technologies */
 body {
     font-family: 'Raleway', sans-serif;
+	color:#12182B;
+	background-color: #F1DEDE;
+	margin: 10px;
 }
 
 .container {
@@ -14,6 +17,7 @@ body {
 .flex-row {
     display:flex;
     justify-content:center;
+    align-items:center;
 }
 
 .btn {
@@ -26,8 +30,8 @@ body {
     font-size:25px;
     width: 7em;
     margin:10px;
-    color:white;
-    background-color: #316ae6;
+    color: white;
+    background-color: #0496FF;
     cursor:pointer;
 
     transition:0.2s;
@@ -35,18 +39,37 @@ body {
 
 .btn:hover {
     transform:translate(-6px, -6px);
-    box-shadow: 6px 6px 0 #2452b6;
+    box-shadow: 6px 6px 0 #1A61DB;
 }
 
 .btn:active {
     transform:translate(0, 0);
-    box-shadow: 0px 0px 0 #2452b6;
+    box-shadow: 0px 0px 0 #1A61DB;
 }
 
 #func-container {
     display:flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
+}
+
+.submit-btn {
+    font-size:20px;
+    padding:10px 20px;
+    border-radius: 500px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: #0496FF;
+    color:white;
+    outline:none;
+}
+
+.submit-btn:hover {
+    text-decoration: underline;
+}
+
+.submit-btn:active {
+    border:1px solid black;
 }
 
 table {
@@ -69,6 +92,19 @@ td:first-child {
 td {
     padding:8px;
     border:1px solid black;
+}
+
+img {
+    width:341px;
+    height:256px;
+    border:1px solid black;
+    margin:10px;
+}
+
+input {
+    font-size:15px;
+    height:20px;
+    width:100px;
 }
 
 .no-select {
