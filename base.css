@@ -1,0 +1,15 @@
+.flex-row {
+    display:flex;
+    justify-content: center;
+}
+
+.flex-col {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}

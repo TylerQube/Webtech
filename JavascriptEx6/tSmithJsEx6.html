@@ -1,0 +1,46 @@
+<!-- Tyler Smith, 9/25/2020, Javascript Exercise 6, Web Technologies -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <div class="page-container">
+        <div class="calc-container">
+            <div class="header">TIP CALCULATOR</div>
+            <p>How much is your bill?</p>
+            <div class="inline-row">
+                <p>$</p><input type="number" id="bill-amount" min="0" placeholder="Bill Amount"/>
+            </div>
+            <p>Rate your service</p>
+            <div class="range-container">
+                <div class="label-wrapper">
+                    <h6>Awful</h6>
+                    <h6>Poor</h6>
+                    <h6>Ok</h6>
+                    <h6>Good</h6>
+                    <h6>Great</h6>
+                </div>
+                <!-- onchange and oninput to cover browser compatibility -->
+                <input type="range" id="rating" oninput="updateDisplay();" onchange="updateDisplay();" min="0" max="4" step="1"/>
+            </div>
+            <div class="flex-row">
+                <h4>Tip:</h4>
+                <!-- percent entity encode is &#37; -->
+                <h4 id="tip-percent">15&#37;</h4>
+            </div>
+            <p>How many people are splitting?</p>
+            <div class="inline-row">
+                <input type="number" id="num-ppl" min="0" placeholder="# of people"/><h5> people</h5>
+            </div>
+            <div class="btn no-select" id="submit">Calculate</div>
+            
+        </div>
+        <div class="tip-container" id="tip-container"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
