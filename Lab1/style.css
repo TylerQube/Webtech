@@ -1,0 +1,72 @@
+/* Tyler Smith, 9/25/2020, JS Lab 1, Web Technologies */
+
+body {
+    font-family:'Raleway', sans-serif;
+}
+
+.flex-row {
+    display:flex;
+    justify-content: center;
+}
+
+.flex-col {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container {
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.checkerboard-container {
+    background: #ff91a9;
+    border: 3px solid #1666cf;
+    width:500px;
+    height:500px;
+
+    /* flexbox to nicely center any sized checkerboard */
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+table, table * {
+    border-collapse: collapse;
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+#side-msg {
+    position:absolute;
+    left:0;
+    top:50%;
+    text-align:center;
+    margin:0 50px;
+}
+
+.btn {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
+    width:150px;
+    height:75px;
+    margin:10px;
+    color:white;
+    background: #1666cf;
+}
+
+.btn:hover {
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
