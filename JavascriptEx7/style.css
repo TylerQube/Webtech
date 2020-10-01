@@ -1,0 +1,89 @@
+/* Tyler Smith, 9/29/20, Javascript Exercise 7, Web Technologies */
+body {
+    font-family:'Raleway', sans-serif;
+}
+
+.flex-row {
+    display:flex;
+    justify-content: center;
+}
+
+.flex-col {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col-start {
+    justify-content: flex-start;
+    margin-bottom:15px;
+}
+
+.flex-col-start * {
+    margin:5px;
+}
+
+p {
+    margin:2px;
+}
+
+ol {
+    font-size:1.2rem;
+    margin:5px;
+}
+
+li {
+    padding:5px;
+    transition:0.2s;
+    border:1px solid #00000000;
+}
+
+li:hover {
+    background-color: #ebebeb;
+    cursor:pointer;
+    position:relative;
+    transform:translate(3px, 0px);
+    transition: border 0.1s;
+}
+
+li:active {
+    border:1px solid black;
+}
+
+input[type=number] {
+    margin:10px;
+    font-size:1.5rem;
+    text-align: center;
+    border:2px solid black;
+    transition:0.1s;
+}
+
+#output-container {
+    padding:5px;
+}
+
+.btn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: #82be3e;
+    outline:none;
+    font-size: 1.5rem;
+    padding:10px 20px;
+    margin:5px;
+    border-radius: 500px;
+    transition:0.2s;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    padding:10px 30px;
+    cursor:pointer;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}

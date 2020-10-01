@@ -1,0 +1,32 @@
+<!-- Tyler Smith, 9/29/20, Javascript Exercise 7, Web Technologies -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Arrays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex-col">
+        <div class="flex-col flex-col-start">
+            <h2>Please select one of the following</h2>
+        <h3>(You can click the list too!)</h3>
+        </div>
+
+        <ol>
+            <li onclick="setSelect(1);">Represent array elements as a string</li>
+            <li onclick="setSelect(2);">Find the most frequent element in an array</li>
+            <li onclick="setSelect(3);">Find the sum of squares of all the elements in an array</li>
+            <li onclick="setSelect(4);">Add the corresponding elements of two arrays</li>
+            <li onclick="setSelect(5);">Quit the program</li>
+        </ol>
+        <input type="number" id="func-select" value="1" min=1 max=5>
+        <div class="btn no-select" id="select-btn">Select</div>
+    </div>
+    <div class="flex-col" id="output-container">
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
