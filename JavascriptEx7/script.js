@@ -28,16 +28,21 @@ function callFunc(funcNum) {
     output.innerHTML = "";
     switch(funcNum) {
         case 1:
-            arrayAsString();
+            var array = ["White", "Red", "Black", "Green"];
+            arrayAsString(array);
             break;
         case 2:
-            modeElement();
+            var array = [3, 'a', 'a', 'a', 2, 3, 2, 'a', 3, 'a', 'a'];
+            modeElement(array);
             break;
         case 3:
-            sumOfSquares();
+            var array = [4, 6, 1, 10];
+            sumOfSquares(array);
             break;
         case 4:
-            sumElements();
+            var arr1 = [5, 5, 3, 7];
+            var arr2 = [6, 4, 9, 12, 2];
+            sumElements(arr1, arr2);
             break;
         case 5:
             quit();
@@ -45,10 +50,8 @@ function callFunc(funcNum) {
     }
 }
 
-function arrayAsString() {
+function arrayAsString(array) {
     console.log("Array as string!");
-
-    var array = ["White", "Red", "Black", "Green"];
 
     var content = 
     `<h3>The following array will be sorted and joined with plus signs</h3>
@@ -64,10 +67,8 @@ function arrayAsString() {
     document.getElementById('display').innerHTML = array;
 }
 
-function modeElement() {
+function modeElement(array) {
     console.log("Most common element!");
-
-    var array = [3, 'a', 'a', 'a', 2, 3, 2, 'a', 3, 'a', 'a'];
 
     var content = 
     `<h3>This function will find the most frequent element in the following array</h3>
@@ -98,10 +99,8 @@ function modeElement() {
     document.getElementById('display').innerHTML = array[mostIndex] + " is the most frequent element.";
 }
 
-function sumOfSquares() {
+function sumOfSquares(array) {
     console.log("Sum of squares!");
-
-    var array = [4, 6, 1, 10];
 
     var content = 
     `<h3>This function will find the sum of the squares of the following array</h3>
@@ -119,11 +118,10 @@ function sumOfSquares() {
     document.getElementById('display').innerHTML = "The sum of squares is " + sum;
 }
 
-function sumElements() {
+function sumElements(arr1, arr2) {
     console.log("Sum corresponding elements!");
 
-    var arr1 = [5, 5, 3, 7];
-    var arr2 = [6, 4, 9, 12, 2];
+    
 
     var content = 
     `<h3>This function will sum the corresponding elements of the following arrays</h3>
