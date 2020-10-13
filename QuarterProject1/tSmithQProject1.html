@@ -1,0 +1,70 @@
+<!-- Tyler Smith, 10/14/20, Quarter Project 1, Web Technologies -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMSA Car Rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Welcome to the IMSA Car Rental Service!</h1>
+    </div>
+    <div id="page-container" class="flex-row">
+        <div class="flex-col" id="form-container">
+            <h3>1. Fill out our rental form</h3>
+            <div class="flex-row">
+                <p>Name: </p><input type="text" id="name-input" value="Zuko"/>
+            </div>
+            <h6 id="name-err">Invalid Entry</h6>
+            <div class="flex-row">
+                <p>Email: </p><input type="email" id="email-input" value="contact@firelord.nation"/>
+            </div>
+            <h6 id="email-err">Must be a valid email</h6>
+            <div class="flex-row">
+                <p>Return Date: </p><input type="date" id="date-input"/>
+            </div>
+            <div class="flex-row">
+                <p>Car Model: </p>
+                <select>
+                    <option>Honda Minivan</option>
+                    <option>Ford Pickup</option>
+                    <option>Subaru SUV</option>
+                    <option>Mitsubishi Mirage</option>
+                    <option>Toyota Highlander</option>
+                    <option>Rolls Royce</option>
+                    <option>Bentley</option>
+                    <option>BMW</option>
+                    <option>Porsche</option>
+                    <option>Mercedes-Benz</option>
+                </select>
+            </div>
+            <div class="btn no-select" onclick="validateForm()">Rent!</div>
+        </div>
+        <div class="flex-col">
+            <h3>2. Pick up your rental!</h3>
+            <canvas id="car-canvas" width="450px" height="200px"></canvas>
+            <div>
+                <p>Economy Vehicles - $29.99/day</p>
+                <ul>
+                    <li>Honda Minivan</li>
+                    <li>Ford Pickup</li>
+                    <li>Subaru SUV</li>
+                    <li>Mitsubishi Mirage</li>
+                    <li>Toyota Highlander</li>
+                </ul>
+                <p>Luxury Vehicles - $49.99/day</p>
+                <ul>
+                    <li>Rolls Royce</li>
+                    <li>Bentley</li>
+                    <li>BMW</li>
+                    <li>Porsche</li>
+                    <li>Mercedes-Benz</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
