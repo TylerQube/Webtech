@@ -27,24 +27,25 @@
             </div>
             <div class="flex-row">
                 <p>Car Model: </p>
-                <select>
-                    <option>Honda Minivan</option>
-                    <option>Ford Pickup</option>
-                    <option>Subaru SUV</option>
-                    <option>Mitsubishi Mirage</option>
-                    <option>Toyota Highlander</option>
-                    <option>Rolls Royce</option>
-                    <option>Bentley</option>
-                    <option>BMW</option>
-                    <option>Porsche</option>
-                    <option>Mercedes-Benz</option>
+                <select id="car-select">
+                    <option class="gray">Select a Model</option>
+                    <option value=0>Honda Minivan</option>
+                    <option value=1>Ford Pickup</option>
+                    <option value=2>Subaru SUV</option>
+                    <option value=3>Mitsubishi Mirage</option>
+                    <option value=4>Toyota Highlander</option>
+                    <option value=5>Rolls Royce</option>
+                    <option value=6>Bentley</option>
+                    <option value=7>BMW</option>
+                    <option value=8>Porsche</option>
+                    <option value=9>Mercedes-Benz</option>
                 </select>
             </div>
             <div class="btn no-select" onclick="validateForm()">Rent!</div>
         </div>
         <div class="flex-col">
             <h3>2. Pick up your rental!</h3>
-            <canvas id="car-canvas" width="450px" height="200px"></canvas>
+            <canvas id="car-canvas" width="500px" height="200px"></canvas>
             <div>
                 <p>Economy Vehicles - $29.99/day</p>
                 <ul>
@@ -65,6 +66,21 @@
             </div>
         </div>
     </div>
+    <div id="invoice-container">
+        <div class="invoice-content" id="invoice-content">
+            <div id="close-btn" class="no-select">&#10005;</div>
+            <div class="flex-col">
+                <div id="invoice-text">
+                    <h1>Your Invoice</h1>
+                    <p>Rented Model: Honda Minivan</p>
+                    <p>Return Date: 10/22/20</p>
+                    <h2>Total:</h3>
+                    <p>$39.99</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script src="script.js"></script>
 </html>
