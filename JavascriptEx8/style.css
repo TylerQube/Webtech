@@ -1,0 +1,74 @@
+/* Monica Narciso & Tyler Smith, 10/9/20, JS Canvas Exercise, Web Technologies */
+html {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background:linear-gradient(#AEB295, #828E82);
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.flex-row {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.flex-col {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    background-color: white;
+}
+
+.btn-container {
+    background-color: #e2dfdf;
+    width:350px;
+    padding:10px 0px;
+}
+
+.btn {
+	border: 4px solid #3A606E;
+    color: #E0E0E0;
+    background-color:#607B7D;
+    font-size:2rem;
+    width:200px;
+    height:50px;
+    margin:5px;
+    border-radius:500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.2s;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    cursor:pointer;
+    border-radius:250px;
+    width:210px;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/*
+colors:
+black	#1D201D
+light olive	#AEB295
+olive	#828E82
+blue	#607B7D
+dark blue	#3A606E
+white	#E0E0E0
+*/

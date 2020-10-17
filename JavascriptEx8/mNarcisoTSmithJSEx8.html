@@ -1,0 +1,31 @@
+<!-- Monica Narciso & Tyler Smith, 10/9/20, JS Canvas Exercise, Web Technologies-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex-row">
+        <div class="flex-col btn-container">
+            <h1>DRAWING TOOLS</h1>
+            <div class="btn no-select" id="btn-line" onclick="drawLine()">line</div>
+            <div class="btn no-select" id="btn-circle" onclick="drawCircle()">circle</div>
+            <div class="btn no-select" id="btn-rect" onclick="drawRect()">rectangle</div>
+            <div class="btn no-select" id="btn-text" onclick="drawText()">text</div>
+            <div class="btn no-select" id="btn-img" onclick="drawImage()">image</div>
+            <div class="btn no-select" id="btn-gradient" onclick="drawGradient()">gradient</div>
+            <div class="btn no-select" id="btn-multiple" onclick="drawMult()">multiple</div>
+            <div class="btn no-select" id="btn-sculpture" onclick="drawSculpture()">sculpture</div>
+            <div class="btn no-select" id="btn-place1" onclick="drawRand()">random</div>
+            <div class="btn no-select" id="btn-place2" onclick="scale()">scale</div>
+        </div>
+        <div class="flex-col">
+            <canvas id="drawing-canvas" width="500px" height="500px"></canvas>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
